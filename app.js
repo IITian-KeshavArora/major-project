@@ -51,8 +51,8 @@ app.use(express.static(path.join(__dirname, "public")));
 app.engine("ejs", ejsMate);
 
 // requiring models
-const sampleListings = require('./init/data.js');
-const { type } = require('os');
+// const sampleListings = require('./init/data.js');
+// const { type } = require('os');
 
 
 main()
