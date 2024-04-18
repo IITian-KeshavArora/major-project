@@ -1,0 +1,9 @@
+Now we are going to publish our project using "render.com". We will deploy our github
+repository in it. We will connect it with the render, select region - southern asia
+in the advance options, we will turn off auto deploy. and then we will create our deployment
+In the deployment page, we will goto connect and copy all the IP's given and paste it in the
+mongoAtlas security/"network access" add IP.
+
+Then we will deploy our project manually by clicking on the "manual deploy" -> "clear log and deploy".
+
+Hurray!! Deployment Done!!

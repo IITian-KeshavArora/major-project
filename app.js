@@ -376,3 +376,11 @@ app.listen(port, () =>
 // .env 
 // node_modules/ (/ is written so that It will ignore the whole folder).
 // now in the git status, we won't get ignored files.
+
+// we will have to add environment variables also that we've ignored in our .gitignore file.
+
+// now goto connect in the logs section and add all the ip addresses in the mongoatlas
+// in the security/network_access/add_ip. 
+// ALL DONE!!
+
+// CONGRATULATIONS!! FOR YOUR FIRST PROJECT ON THE FULL STACK WEB DEVELOPMENT. I LOVE YOU.
