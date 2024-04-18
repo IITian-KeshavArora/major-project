@@ -1,0 +1,295 @@
+body
+{
+    font-family: "Plus Jakarta Sans", sans-serif  !important;
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container
+{
+    flex:1;
+}
+
+/* Decorating the Navbar */
+.navbar
+{
+    height:5rem;
+    background-color: white;
+}
+
+/* Styling the NavBar's icon */
+.fa-compass
+{
+    color:#fe424d;
+    font-size: 2rem;
+}
+
+.nav-link
+{
+    color: #222222 !important;  /*To override styling of bootstrap icons, we've to use !important*/
+}
+
+/* Now styling the footer of the webpage */
+.f-info-links a
+{
+    text-decoration: none;
+    color:#222222;
+}
+
+.f-info-links a:hover
+{
+    text-decoration: underline #222222;
+}
+
+.f-info
+{
+    display:flex;
+    height:8rem;
+    background-color: #ebebeb;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+    text-align: center;
+    vertical-align: middle;  /*It is used for vertically alignment of the object*/
+}
+
+.f-info-links, .f-info-socials, .f-info-brand
+{
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-info-socials i
+{
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+
+
+/* Decorating the mainpage card of hotels. */
+
+.card-text a
+{
+    text-decoration: none;
+    color:#222222;
+    font-weight: 400;
+}
+
+.card-text a:hover
+{
+    text-decoration: underline #222222;
+}
+
+.card
+{
+    border: none !important;
+    margin-bottom: 2rem;
+}
+
+.card img
+{
+    border-radius: 2rem;
+    width:100% !important;  
+    object-fit: cover !important;
+}
+
+/*
+object-fit: The object-fit CSS property sets how the content of a replaced element, such as an <img> or <video>,
+            should be resized to fit its container.
+
+object-fit: fill;     -> It will stretch the img vid to the width of the container
+object-fit: contain;  -> It will stretch the img vid height-wise to match the aspect ratio of the container.
+object-fit: none;     -> It's the default aspect ratio of the object.
+object-fit: cover;    -> It will zoom in the object to match the aspect ratio of the container.
+*/
+
+.card-body
+{
+    padding:0 !important;
+}
+
+.card-text , .card-text a
+{
+    font-weight: 400 !important;
+}
+
+.row button
+{
+    text-decoration: none;
+    background-color: white;
+    border: none;
+    text-align: left;
+}
+
+/* Card Effects */
+/* Card Image Overlay of Bootstap allows us to write on the image. put videos icons etc on the image. */
+
+.card-img-overlay
+{
+    opacity: 0;
+}
+
+.card-img-overlay:hover
+{
+    opacity: 0.2;
+    background-color: white;
+}
+
+/* Styling added for the newlistings page */
+
+.newBtn
+{
+    display: flex !important;
+    justify-content: center !important;
+    margin: auto;
+    width:66.5%;
+    text-align: center !important;
+    background-color: #fe424d !important;
+    color: white !important;
+    border: 2px solid black !important;
+    transition: border-radius 0.8s !important;
+}
+.newBtn:hover
+{
+    border-radius: 3rem;
+    border: 2px solid black;
+}
+
+/* Styling Show page */
+
+.show-img
+{
+    height:30vh;
+}
+
+.delBtn:hover
+{
+    border-radius: 3rem !important;
+    border: 2px solid black;
+}
+
+.editBtn, .delBtn
+{
+    background-color: #fe424d !important;
+    border: 2px solid black !important;
+    width: 100% !important;
+    transition: border-radius 0.8s !important;
+    text-align: center !important;
+}
+
+.editBtn:hover
+{
+    border-radius: 3rem;
+}
+
+.delBtn
+{
+    background-color: #222222 !important;
+}
+
+.review-card
+{
+    border:1px solid grey !important;
+    padding-bottom: 0.5rem;
+    min-width: 200px !important;
+}
+
+.revDelBtn
+{
+    background-color: #222222 !important;
+}
+.revDelBtn:hover
+{
+    opacity:0.9;
+}
+
+.signup
+{
+    background-color: #198655 !important;
+}
+
+.signup:hover
+{
+    text-decoration: underline !important;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 5;
+}
+
+.filters
+{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.filter
+{
+    text-align: center;
+    opacity: 0.7;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-top: 1rem;
+}
+.filter:hover
+{
+    opacity:1;
+}
+
+.form-switch
+{
+    border-radius: 1rem;
+    height: 2.5rem;
+    padding: 0.5rem;
+    position: relative;
+    bottom: 0.3rem;
+    width:14rem;
+}
+.form-switch:hover
+{
+    background-color: #F7F7F7;
+    border:1px solid black;
+}
+
+
+/* Styling for the search bar */
+.btn-search
+{
+    background-color: #fe424d !important;
+    color:white !important;
+    padding-left: 1rem !important; 
+    padding-right: 1rem !important; 
+    border-radius: 25px !important;
+}
+
+.btn-search i
+{
+    display:inline;
+    margin-right: 0.5rem;
+}
+
+.search-input
+{
+    border-radius: 25px !important;
+    padding-left: 1.2rem !important;
+    padding-right: 3rem !important;
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    font-size: 0.9rem !important;
+    width:100% !important;
+}
+
+.d-flex
+{
+    width:50rem !important;
+}

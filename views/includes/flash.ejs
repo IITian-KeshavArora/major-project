@@ -1,0 +1,16 @@
+<% if(successMsg && successMsg.length != 0)
+{ %> 
+    <div style="text-align: center;" class="alert alert-success alert-dismissible fade show" role="alert">
+        <%= successMsg %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>    
+      </div>
+<% } %>
+
+<% if(Error && Error.length != 0)
+{ %> 
+    <div class="alert alert-danger alert-dismissible fade show" style="text-align: center;" role="alert">
+        <%= Error %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>    
+      </div>
+<% } %>
+

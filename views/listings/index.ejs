@@ -1,0 +1,126 @@
+<% layout('layouts/boilerplate') -%>
+<body>
+    <!-- <%= successMsg %>  Now it will flash the message after creation of new listing -->
+    <!-- But it is not loocking attractive, so we will use bootstrap also also includes our messages
+         in the boilerplate code -->
+    <!-- <h2>All Listings</h2> -->
+    <!-- <form action="/listings/new">
+        <button>Create New Listing</button>
+    </form> -->
+
+
+    <!-- Adding icons in the home tab -->
+    <div class="filters">
+        <div class="filter">
+            <div><i class="fa-solid fa-fire"></i></div>
+            <p>Trending</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-bed"></i></div>
+            <p>Rooms</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-mountain-city"></i></div>
+            <p>Iconic Cities</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-umbrella-beach"></i></div>
+            <p>Beach</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-regular fa-snowflake"></i></div>
+            <p>Arctic</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-utensils"></i></div>
+            <p>Breakfast</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-monument"></i></div>
+            <p>Memorials</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-person-swimming"></i></div>
+            <p>Pool</p>
+        </div>
+        <div class="filter">
+            <div><i class="fa-solid fa-handshake"></i></div>
+            <p>Meetings</p>
+        </div>
+        <div class="filter">
+            <div><span class="material-symbols-outlined">
+                partner_exchange
+                </span></div>
+            <p style="position: relative; bottom:0.32rem;">Couples</p>
+        </div>
+        <div class="filter">
+            <div><span class="material-symbols-outlined">
+                downhill_skiing
+                </span></div>
+            <p style="position: relative; bottom:0.32rem;">Skiing</p>
+        </div>
+        <div class="filter">
+            <div><span class="material-symbols-outlined">
+                movie
+                </span></div>
+            <p style="position: relative; bottom:0.32rem;">Movie</p>
+        </div>
+        <div class="filter">
+            <div><span class="material-symbols-outlined">
+                temple_hindu
+                </span></div>
+            <p style="position: relative; bottom:0.32rem;">Religious</p>
+        </div>
+        <div class="toggle-tax">
+            <div class="form-check-reverse form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault">Display total after taxes</label>
+        </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+<div class="row row-cols-lg-3 row-cols-md-3 row-cols-sm-1 mt-3"> <!--see class name and it's function accordingly-->
+    <% for(hotel of allListings) { %>
+            <button onclick="window.location.href = '/listings/<%=hotel._id%>';">
+                <div class="card col listing-card">
+                    <img style="height: 20rem;" src="<%= hotel.image.url %>" class="card-img-top" alt="listingImage">
+                    <div class="card-img-overlay">
+                        <p class="card-text" style="text-align: left;"></p>
+                      </div>
+                    <div class="card-body">
+                      <p class="card-text"><a href="/listings/<%=hotel._id%>"><b><%= hotel.title %></b></a> <br>
+                         &#8377; <%= hotel.price.toLocaleString("en-IN") %>  / night <span style="display: none;" class="gst">&nbsp;<i>+18% GST</i></span></p>
+                    </div>
+            </div>
+        </button>
+        </form>
+
+<% } %>
+</div>
+
+</body>
+
+<script>
+    let taxSwitch = document.getElementById('flexSwitchCheckDefault');
+    let showGST = document.getElementsByClassName("gst");
+    taxSwitch.addEventListener("click", function()
+    {
+        for(info of showGST)
+        {
+            if(info.style.display === "none")
+            {
+                info.style.display = "inline";
+            }
+            else
+            {
+                info.style.display = "none";
+            }
+        }
+    })
+</script>

@@ -1,0 +1,103 @@
+<% layout('layouts/boilerplate') -%>
+<!--It assumes views as the root directory.-->
+<!-- By doing this, now that body part in the boilerplate.ejs file will be replaced with this edit.ejs body -->
+<body>
+  <br>
+  <h3 style="text-align: center;">Edit Your Listing:</h3>
+  <div class="row">
+    <form class="needs-validation" action="/listings/<%=hotel._id%>?_method=PUT" method="post" novalidate enctype="multipart/form-data">
+      <div class="col-8 offset-2">
+        <div class="mb-3">
+          <label class="form-label" for="title">Title: </label>
+          <input required class="form-control" type="text" value="<%=hotel.title%>" id="title" name="title" />
+          <div class="valid-feedback">
+            Title looks good!
+          </div>
+          <div class="invalid-feedback">
+            Title is invalid!
+          </div>
+        </div>
+    
+        <div class="mb-3">
+          <label class="form-label" for="description">Description: </label>
+          <br />
+          <textarea required class="form-control"
+            rows="8"
+            cols="30"
+            type="text"
+            id="description"
+            name="description"
+          ><%=hotel.description%></textarea>
+          <div class="valid-feedback">
+            Description looks good!
+          </div>
+          <div class="invalid-feedback">
+            Write a valid description!
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="image">Current Image: </label>
+          <br>
+          <img src=<%= orignalImageUrl %> alt="listing_image">
+        </div>
+        <br>
+    
+      <div class="mb-3">
+      <label class="form-label" for="image">Image/URL: </label>
+      <input class="form-control"
+        type="file"
+        name="listing[image]"
+        value="<%=hotel.image['url']%>"
+        id="image"
+      />
+      </div>
+    
+        <div class="row">
+          <div class="mb-3 col-md-4">
+            <label class="form-label" for="price">Price: </label>
+            <input required class="form-control" type="text" value="<%=hotel.price%>" id="price" name="price" />
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              Price is invalid!
+            </div>
+          </div>
+          <div class="mb-3 col-md-8">
+          <label class="form-label" for="location">Location: </label>
+          <input required class="form-control"
+            type="text"
+            value="<%=hotel.location%>"
+            id="location"
+            name="location"
+          />
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+          <div class="invalid-feedback">
+            Enter a valid Location
+          </div>
+        </div>
+        </div>
+          
+    
+        <div class="mb-3">
+          <label class="form-label" for="country">Country: </label>
+          <input required class="form-control" type="text" value="<%=hotel.country%>" id="country" name="country" />
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+          <div class="invalid-feedback">
+            Enter a valid Country!!
+          </div>
+        </div>
+      </div>
+  
+  
+      <br />
+      <button class="newBtn btn btn-primary">Edit Listing</button>
+      <br>
+    </form>
+  </div>
+
+</body>

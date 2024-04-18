@@ -1,0 +1,93 @@
+<% layout('layouts/boilerplate') -%>
+<body>
+    <div class="row"> <!--We are doing this to reduce the size of text inputs of the form-->
+        <form class="needs-validation" id="form" action="/listings" method="post" novalidate enctype="multipart/form-data"> 
+<!--adding nonvalidate will remove browser's default answer for non validation of forms.-->
+            <br><br>
+            <h3 style="text-align: center;">Create a New Listing: </h3>
+            <br>
+            <div class="col-8 offset-2">   <!--Now our text inputs is 8/12 of the total screen width-->
+                <div class="mb-3">         <!--Our screen is divided into 12 columns bydefault-->
+                    <label for="title" class="form-label">Title: </label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input required type="text" placeholder="Add a catchy title" id="title" name="title" class="form-control">
+                    <!-- This message will be shown in case of valid input -->
+                    <div class="valid-feedback">
+                        Title looks good!
+                    </div>
+                    <!-- This message will be shown in case of invalid inputs -->
+                    <div class="invalid-feedback">
+                        hotel's name is required
+                    </div>
+                </div>
+        
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description: </label>
+                    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <textarea required class="form-control" rows="8" cols="30" type="text" placeholder="enter description for your hotel" id="description" name="description"></textarea>
+                    <div class="valid-feedback">
+                        Description looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        description is required!!
+                    </div>
+                </div>
+        
+                <div class="mb-3">
+                    <label class="form-label" for="image">Upload Image: </label>
+                    <input class="form-control" type="file" name="listing[image]" placeholder="Enter image's url" id="image">
+                </div>
+                <div class="row">
+                    <div class="mb-3 col-md-4">
+                        <label class="form-label" for="price">Price: </label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input required class="form-control" type="text" placeholder="Enter pricing" id="price" name="price">
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Enter a valid price
+                        </div>
+                    </div>
+            
+                    <div class="mb-3 col-md-8">
+                        <label class="form-label" for="location">Location: </label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <input required class="form-control" type="text" placeholder="Write your hotel's location" id="location" name="location">
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Enter a valid location!
+                        </div>
+                    </div>
+                </div>
+
+        
+                <div class="mb-3">
+                    <label class="form-label" for="country">Country: </label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input required class="form-control" type="text" placeholder="enter country" id="country" name="country">
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Enter a valid country!
+                    </div>
+                    <br>
+                </div>
+            </div>
+            <button class="newBtn btn btn-outline-primary">Add Listing</button>
+            <br>
+        </form>
+    </div>
+    
+    <script>
+        document.getElementById("btn").addEventListener('onclick', function()
+        {
+            document.getElementById("form").submit();
+        })
+    </script>
+</body>
+
