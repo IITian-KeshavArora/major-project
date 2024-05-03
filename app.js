@@ -61,8 +61,8 @@ main()
 
 async function main() 
 {
-    // await mongoose.connect('mongodb://127.0.0.1:27017/airbnb');
-    await mongoose.connect(dbUrl);
+    // await mongoose.connect('mongodb://127.0.0.1:27017/airbnb'); // use this for modifying code.
+    await mongoose.connect(dbUrl); // use this for External cloud database.
 }
 
 // Using connect-mongo for storing sessions while deployment for production.
